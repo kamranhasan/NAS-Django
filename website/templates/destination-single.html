@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Nomads</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% load staticfiles %}
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    
+        <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+        
+        <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      </head>
+      <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+          <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logofinal.png' %}" width='140px' height='70px'></a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="oi oi-menu"></span> Menu
+            </button>
+    
+            <div class="collapse navbar-collapse" id="ftco-nav">
+              <ul class="navbar-nav nav ml-auto">
+                <li class="nav-item"><a href="{% url 'index' %}#home-section" class="nav-link"><span>Home</span></a></li>
+                <li class="nav-item"><a href="{% url 'index' %}#services-section" class="nav-link"><span>Services</span></a></li>
+                <li class="nav-item"><a href="{% url 'index' %}#about-section" class="nav-link"><span>About</span></a></li>
+                <li class="nav-item"><a href="{% url 'index' %}#destination-section" class="nav-link"><span>Destination</span></a></li>
+                <li class="nav-item"><a href="{% url 'index' %}#hotel-section" class="nav-link"><span>Packages</span></a></li>
+                <!-- <li class="nav-item"><a href="#restaurant-section" class="nav-link"><span>Restaurant</span></a></li> -->
+                <!-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li> -->
+                <li class="nav-item"><a href="{% url 'index' %}#contact-section" class="nav-link"><span>Contact</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+          
+	  <section class="hero-wrap" style="background-image: url({% static 'images/nas.jpg' %});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-start">
+          <div class="col-md-9 ftco-animate pb-4">
+            <h1 class="mb-3 bread">Discover Your Inner Self</h1>
+            <p><a href="#booked" class="btn btn-primary py-2 px-4">Book this tour</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-services-2 ftco-no-pt">
+      {% block content %}
+    	<div class="container-fluid px-0 bg-light">
+    		<div class="container">
+    			<div class="row tour py-5">
+        	
+        </div>
+    		</div>
+    	</div>
+      <div class="container">
+        <div class="row">
+        	<div class="col-md-12 tour-wrap mb-5">
+    				<div class="row">
+    					<div class="col-md-6 d-flex ftco-animate">
+    						<div class="img align-self-stretch" style="background-image: url({{ package.picture.url }});"></div>
+    					</div>
+    					<div class="col-md-6 ftco-animate">
+    						<div class="text py-5">
+    							<h3><a href="#">{{ package.name }}</a></h3>
+    							<p class="pos">from {{ package.price }} for {{ package.days }}</p>
+    							<p>{{ package.description }}</p>
+    							<p><a href="#" class="btn btn-secondary">Details</a> <a href="#" class="btn btn-primary">Book now</a></p>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			
+    			<div class="col-md-12 tour-wrap">
+    				<table class="table">
+					    <tbody>
+					      <tr>
+				      	  <th scope="row">Departure</th>
+					        <td>
+					        	<p>{{ package.departure }}</p>
+					        </td>
+					        <td></td>
+					      </tr><!-- END TR-->
+                <tr>
+                    <th scope="row">Date</th>
+                    <td>
+                      <p>{{ package.date }}</p>
+                    </td>
+                    <td></td>
+                  </tr><!-- END TR-->
+                <tr>
+				      	  <th scope="row">Departure</th>
+					        <td>
+					        	<p>{{ package.departure }}</p>
+					        </td>
+					        <td></td>
+					      </tr><!-- END TR-->
+
+					      <tr>
+				      	  <th scope="row">Departure Time</th>
+					        <td>
+					        	<p>{{ package.departureTime }}</p>
+					        </td>
+					        <td></td>
+					      </tr><!-- END TR-->
+
+					      <tr>
+				      	  <th scope="row">Return Time</th>
+					        <td>
+					        	<p>{{ package.returnTime }}</p>
+					        </td>
+					        <td></td>
+					      </tr><!-- END TR-->
+                <tr>
+                    <th scope="row">Duration</th>
+                    <td>
+                      <p>{{ package.days }}</p>
+                    </td>
+                    <td></td>
+                  </tr><!-- END TR-->
+  
+					      <tr>
+				      	  <th scope="row">Included</th>
+					        <td class="d-flex">
+                      {{ package.included }}
+					        </td>
+					        <td></td>
+					      </tr><!-- END TR-->
+
+					      <tr>
+				      	  <th scope="row">Not Included</th>
+					        <td class="d-flex">
+					        	  {{ package.notIncluded }}
+					        </td>
+					        <td></td>
+					      </tr>
+					      <!-- <tr>
+				      	  <th scope="row">Itinerary</th>
+					        <td class="d-flex">
+					        	  
+					        </td>
+					        <td></td>
+					      </tr> -->
+					      
+					    </tbody>
+					  </table>
+    			</div>
+    			
+              <!-- END comment-list -->
+              
+              
+            </div>
+    			</div>
+        </div>
+
+
+        <div id='booked' class="comment-form-wrap pt-5">
+          <h3 align='center' class="mb-5 btn-primary">Book This Trip</h3>
+          <form class="form-contact contact_form" action="{% url 'booked' %}#booked" method="POST" >
+            {% csrf_token %}
+            <div class="row">
+              <div class="container col-20">
+              <div align='center' class="form-group">
+                {% block bookingsform %}
+                {% load crispy_forms_tags %}
+                {{ booking|crispy}}
+              <button type="submit" class="btn draw-border btn-primary">{{ respond }}</button>
+            <h3>{{ accountDetails.3 }}</h3>
+            <p>{{ accountDetails2.3 }}</p>
+            <h3>{{ accountDetails.2 }}</h3>
+            <p>{{ accountDetails2.2 }}</p>
+            <h3>{{ accountDetails.1 }}</h3>
+            <p>{{ accountDetails2.1 }}</p>
+            <h3>{{ accountDetails.0 }}</h3>
+            <p>{{ accountDetails2.0 }}</p>
+            </div>
+            
+            {% endblock bookingsform %}
+
+
+        <!-- <div align='center' id='booked' class="comment-form-wrap pt-5">
+          <h3 align='center' class="mb-5 btn-primary">Book this tour</h3>
+          <form class="form-contact contact_form" action="{% url 'booked' %}#booked" method="POST" >
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-12">
+              <div class="form-group">
+                {% block bookingform %}
+                {% load crispy_forms_tags %}
+              {{ booking|crispy}}
+              <button type="submit" class="btn draw-border btn-primary">{{ respond }}</button>
+            </div>
+            {% endblock bookingform %} -->
+            </form>
+        </div>
+      </div>
+      {% endblock content %}
+    </section> <!-- .section -->
+		
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md">
+              <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">About <span><a href="{% url 'index' %}">N.A.S</a></span></h2>
+                <p>You don’t have to be rich to travel well.</p>
+                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                  <li class="ftco-animate"><a href="https://facebook.com/NomadsAdventureServices/?ref=br_rs"><span class="icon-facebook"></span></a></li>
+                  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="ftco-footer-widget mb-4 ml-md-4">
+                <h2 class="ftco-heading-2">Information</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Booking</a></li>
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Privacy</a></li>
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Call Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md">
+               <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Experience</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Adventure</a></li>
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Beach</a></li>
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Nature</a></li>
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Camping</a></li>
+                  <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Party</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Have a Question?</h2>
+                <div class="block-23 mb-3">
+                  <ul>
+                    <li><span class="icon icon-map-marker"></span><span class="text">Tariq Road, Karachi.</span></li>
+                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">03322394636</span></a></li>
+                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@nas.com</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+    
+              <p>
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |<a href="#" target="_blank">Nomads Adventure Services</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/scrollax.min.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{% static 'js/google-map.js' %}"></script>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+      
+    </body>
+  </html>

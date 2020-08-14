@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nomads</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load staticfiles %}
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logofinal.png' %}" width='140px' height='70px'></a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#destination-section" class="nav-link"><span>Destination</span></a></li>
+	          <li class="nav-item"><a href="#hotel-section" class="nav-link"><span>Packages</span></a></li>
+	          <!-- <li class="nav-item"><a href="#restaurant-section" class="nav-link"><span>Restaurant</span></a></li> -->
+	          <!-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li> -->
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  
+	  <section id="home-section" class="hero">
+	  	<img src="{% static 'images/blob.svg' %}" class="svg-blob" alt="Nomads">
+		  <div class="home-slider owl-carousel">
+	      <div class="slider-item">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third order-md-last">
+	          		<div class="img" style="background-image:url({% static 'images/nas.jpg' %});">
+	          			<div class="overlay"></div>
+	          		</div>
+	          		<div class="bg-primary">
+		          		<div class="vr"><span class="pl-3 py-4" style="background-image: url({% static 'images/bg_1-1.jpg' %});">NAS</span></div>
+	          		</div>
+	          	</div>
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading pl-5">Discover Your Adventure</span>
+			            <h1 class="mb-4 mt-3">Explore Your Travel Destinations like never before</h1>
+			            <p>N.A.S is one of the leading tour operators in Pakistan - Expeditions, Treks, Cultural Tours or Business Travel - let us know how we can help!</p>
+			            
+			            <p><a href="{% url 'packages' %}" class="btn btn-primary px-5 py-3 mt-3">Discover <span class="ion-ios-arrow-forward"></span></a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third order-md-last">
+	          		<div class="img" style="background-image:url({% static 'images/skardu.jpg' %});">
+	          			<div class="overlay"></div>
+	          		</div>
+	          		<div class="vr"><span class="pl-3 py-4" style="background-image: url({% static 'images/bg_2-2.jpg' %});">Skardu</span></div>
+	          	</div>
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading pl-5">Discover Your Adventure</span>
+			            <h1 class="mb-4 mt-3">Never Stop Exploring</span></h1>
+			            <p>N.A.S is one of the leading tour operators in Pakistan - Expeditions, Treks, Cultural Tours or Business Travel - let us know how we can help!</p>
+			            <p><a href="{% url 'packages' %}" class="btn btn-primary px-5 py-3 mt-3">Discover <span class="ion-ios-arrow-forward"></span></a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb ftco-no-pt">
+    	<div class="container">
+    		<div class="row justify-content-center pb-0 pb-mb-5 pt-5 pt-md-0">
+          <div class="col-md-12 heading-section ftco-animate">
+          	<span class="subheading">Fit &amp; Healthy</span>
+            <h2 class="mb-4">Where do you want to go?</h2>
+            <p>Far far away, behind the word mountains, far from the worries!</p>
+          </div>
+        </div>
+	    	<div class="row">
+					<div class="col-md-12">
+					<p align='center'><a href="{% url 'makemyowntrip' %}" class="btn btn-primary px-5 py-3 mt-3">Make My Own Trip <span class="ion-ios-arrow-forward"></span></a></p>
+		        </div>
+					</div>
+	    	</div>
+	    </div>
+    </section>
+		
+		<section class="ftco-section ftco-services-2" id="services-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<span class="subheading">Fit &amp; Healthy</span>
+            <h2 class="mb-4">Our Services</h2>
+            <p>Far far away, behind the word mountains, far from the ordinary!</p>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+					<div class="blob">
+							<!-- This SVG is from https://codepen.io/Ali_Farooq_/pen/gKOJqx -->
+							<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+							<path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"/>
+							</svg>
+						  </div>
+						  <!-- <span class="flaticon-gliding"></span> -->
+              <div class=" justify-content-center align-items-center d-flex"><img style="background-image: url({% static 'images/blob.svg'%}); " src="{% static 'images/hot-air-balloon.svg' %}"></div>
+			  
+			  <div class="media-body">
+                <h3 class="heading mb-3">Activities</h3>
+				<p>A vast range of mind relaxation activities will fill up your soul with positive energy!</p>
+			</div>
+			  	
+            </div>      
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+					<div class=" justify-content-center align-items-center d-flex"><img style="background-image: url({% static 'images/blob.svg' %});" src="{% static 'images/hot-air-balloon.svg' %}"></div>
+              <!-- <div class="icon justify-content-center align-items-center d-flex"><span  class="flaticon-world"></span></div> -->
+              <div class="media-body">
+                <h3 class="heading mb-3">Travel Arrangement</h3>
+                <p>We rely on the best available resources when it comes o the arrangement!</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+					<div class=" justify-content-center align-items-center d-flex"><img style="background-image: url({% static 'images/blob.svg' %}); " src="{% static 'images/hot-air-balloon.svg' %}"></div>
+              <!-- <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-tour-guide"></span></div> -->
+              <div class="media-body">
+                <h3 class="heading mb-3">Private Guide</h3>
+                <p>Private guides are what makes us better from our competitors!</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services text-center d-block">
+					<div class=" justify-content-center align-items-center d-flex"><img style="background-image: url({% static 'images/blob.svg' %});" src="{% static 'images/hot-air-balloon.svg' %} "></div>
+              <!-- <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-map-of-roads"></span></div> -->
+              <div class="media-body">
+                <h3 class="heading mb-3">Location Manager</h3>
+                <p>Each and every location is managed by our experienced team of professionals in their domain!</p>
+              </div>
+            </div>      
+          </div>
+        </div>
+			</div>
+		</section>
+
+		<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+    	<div class="container">
+    		<div class="row no-gutters d-flex">
+    			<div class="col-md-6 col-lg-5 d-flex">
+    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url({% static 'images/Quotes.jpg' %}); background-size=cover;background-repeat:no-repeat;">
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-7 px-lg-5 py-md-5 bg-darken">
+    				<div class="py-md-5">
+	    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate p-5 p-lg-0">
+			          	<span class="subheading">Get in touch with us</span>
+						<h2 class="mb-4">Who Are We?</h2>
+						<p>We have a vision to showcase the real & beautiful picture of Pakistan to the World.</p>
+						<p>Most people are very busy to win the human race of success & money, in this situation we at NOMADS want people from Pakistan & other countries to take few days off every year so that they can TRAVEL TO MEET THEIR INNER SELF because most of us have ignored our own personality to meet the New World Order.</p>
+			            <p><a href="{% url 'packages' %}" class="btn btn-primary py-3 px-4">Book now</a> <a href="#contact-section" class="btn btn-white py-3 px-4">Contact us</a></p>
+			          </div>
+			        </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-intro img" id="destination-section" style="background-image: url({% static 'images/gilgit.jpg' %});">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-9 text-center">
+						<h2>Choose the Perfect Destination</h2>
+						<p>We manage your adventure crave.</p>
+						<p class="mb-0"><a href="{% url 'packages' %}" class="btn btn-primary  px-4 py-3">Plans and Packages</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <section class="ftco-section">
+			{% block content %}
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<span class="subheading">Nomads Destinations</span>
+            <h2 class="mb-4">Best Places to Travel</h2>
+            <p>Far far away, behind the word mountains, far from the worries!</p>
+          </div>
+        </div>
+    		<div class="row">
+				{% for package in package %}
+    			<div class="col-md-6 col-lg-4 ftco-animate">
+    				<div class="project">
+    					<div class="img">
+							<div class="vr"><span>Sale</span></div>					
+		    				<a href="{% url 'plan' package.id %}"><img src="{{ package.picture.url }}" class="img-fluid" alt=""></a>
+							</div>						
+							<div class="text">
+	    					<h4 class="price">{{ package.price }}</h4>
+	    					<span>{{ package.days }}</span>
+	    					<h3><a href="{% url 'plan' package.id %}">{{ package.name }}</a></h3>
+	    					<div class="star d-flex clearfix">
+	    						<div class="mr-auto float-left">
+		    						<span class="ion-ios-star"></span>
+		    						<span class="ion-ios-star"></span>
+		    						<span class="ion-ios-star"></span>
+		    						<span class="ion-ios-star"></span>
+		    						<span class="ion-ios-star"></span>
+	    						</div>
+	    						<div class="float-right">
+	    							<span class="rate"><a href="#">(120)</a></span>
+	    						</div>
+							</div>
+							
+	    				</div>
+	    				<a href="{% static 'images/destination-1.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+	    					<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+				</div>
+				{% endfor %}
+			</div>
+			<p align='center' class="mb-0"><a href="{% url 'packages' %}" class="btn btn-primary  px-4 py-3">See All Packages</a></p>
+    	</div>
+    </section>
+
+		<section class="ftco-intro img" id="hotel-section" style="background-image: url({% static 'images/cover.jpg' %});">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-9 text-center">
+						<h2>Choose Your Own Package</h2>
+						<p>We manage your dream adventure crave!</p>
+						<p class="mb-0"><a href="{% url 'makemyowntrip' %}" class="btn btn-primary  px-4 py-3">Make My Own Trip</a></p>
+					</div>
+				</div>
+			</div>
+			{% endblock content %}
+		</section>
+
+		
+
+    <section class="ftco-section testimony-section">
+		{% block testimonials %}
+		
+		<img src="{% static 'images/blob.svg' %}" class="svg-blob" alt="NAS">
+    	<img src="{% static 'images/blob.svg' %}" class="svg-blob-2" alt="NAS">
+      <div class="container">
+        <div class="row justify-content-center pb-3">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          	<span class="subheading">Read testimonials</span>
+            <h2 class="mb-4">What Client Says</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+			  {% for review in testinomials %}
+				<div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img" style="background-image: url({{ review.picture.url }})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text px-4 pb-5">
+                    <p class="mb-4">{{ review.description }}</p>
+                    <p class="name">{{ review.name }}</p>
+                  </div>
+				</div>
+			  </div>
+			  {% endfor %}
+            </div>
+          </div>
+        </div>
+	  </div>
+	  {% endblock testimonials %}
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+		<div  class="row">
+			<div class="col-12">
+			  <h2 class="contact-title" style="color:blue;">Get in Touch</h2>
+			</div>
+			<div class="col-lg-8">
+			  <form class="form-contact contact_form" action="{% url 'contacted' %}#contact-section" method="POST" >
+				{% csrf_token %}
+				<div class="row">
+				  <div class="col-12">
+					<div class="form-group">
+					  {% block contactform %}
+					  {% load crispy_forms_tags %}
+				  {{ form|crispy}}
+				  <button type="submit" class="btn draw-border btn-primary">{{ respond }}</button>
+				</div>
+				{% endblock contactform %}
+			  </form>
+			</div>
+			
+		  </div>
+      </div>
+    </section>
+		
+		<section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div id="map" class="bg-white"></div>
+		</section>
+
+		
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About <span><a href="{% url 'index' %}">N.A.S</a></span></h2>
+              <p>You don’t have to be rich to travel well.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://facebook.com/NomadsAdventureServices/?ref=br_rs"><span class="icon-facebook"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Booking</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Privacy</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Call Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Experience</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Adventure</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Beach</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Nature</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Camping</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Party</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Question?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Tariq Road, Karachi.</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">03322394636</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@nas.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+	
+            <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |<a href="#" target="_blank">Nomads Adventure Services</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  
+  <script src="{% static 'js/main.js' %}"></script>
+    
+  </body>
+</html>
